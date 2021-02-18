@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--tipStr-->
+    <string name="baseDiaogTitle">温馨提示</string>
+    <string name="baseCancle">取消</string>
+    <string name="baseDetermine">确定</string>
+    <string name="baseSubmit">提交</string>
+    <string name="baseSearch">搜索</string>
+    <string name="baseInput">请输入</string>
+    <!--errorStr-->
+    <string name="baseNetError">网路错误</string>
+    <string name="baseConnectError">网络连接错误</string>
+    <string name="baseDataError">数据错误</string>
+    <string name="baseXMLnone">未引入布局</string>
+    <string name="takePhoto">相机</string>
+    <string name="pictureResource">相册</string>
+    <string name="Loadding">加载中...</string>
+    <string name="emptyTv">空空如也！</string>
+</resources>

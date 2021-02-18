@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/revisedialog_layout"
+    style="@style/MW"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/titleTvS"
+        android:padding="@dimen/dp_10"
+        android:text="@string/baseDiaogTitle" />
+
+    <TextView
+        android:id="@+id/dialog_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/dp_14" />
+
+    <LinearLayout
+        android:id="@+id/dialog_content"
+        style="@style/MW"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/dp_5">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialogLine"
+        style="@style/HL"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_5"/>
+
+    <LinearLayout
+        android:id="@+id/dialog_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/dialogCancle"
+            style="@style/cotentTvS_AW"
+            android:padding="@dimen/dp_5"
+            android:text="@string/baseCancle"/>
+
+        <View
+            android:id="@+id/dialogVLine"
+           style="@style/VL"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="@dimen/dp_5" />
+
+        <TextView
+            android:id="@+id/dialogDetermine"
+            style="@style/cotentTvS_AW"
+            android:padding="@dimen/dp_5"
+            android:text="@string/baseDetermine"/>
+
+    </LinearLayout>
+</LinearLayout>

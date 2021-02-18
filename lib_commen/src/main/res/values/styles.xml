@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dialog主题-->
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <!--从下往上弹，从上往下收入-->
+    <style name="popup_bottom_slideanimation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!--自定义Toolbar据左边距的处理-->
+    <style name="titleToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="titleMargin">0dp</item>
+    </style>
+
+    <!--baseStyle-->
+    <style name="MM">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="WM">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MW">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AM">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="MA">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_0</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="WW">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AW">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="WA">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_0</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <!--标题文字样式-->
+    <style name="titleTvS" parent="MW">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/color_titleTv</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--内容文字样式-->
+    <style name="cotentTvS" parent="WW">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+     <style name="cotentTvS_AW" parent="AW">
+        <item name="android:textSize">@dimen/sp_14</item>
+         <item name="android:layout_weight">1</item>
+         <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <!--提示文字样式-->
+    <style name="tipTvS">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/color_contentTvGrey</item>
+    </style>
+    <!--横向线条-->
+    <style name="HL">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:background">@color/color_8f8f8f</item>
+    </style>
+    <!--竖向线条-->
+    <style name="VL">
+        <item name="android:layout_width">@dimen/dp_1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="layout_goneMarginTop">@dimen/dp_5</item>
+        <item name="layout_goneMarginBottom">@dimen/dp_5</item>
+        <item name="android:background">@color/color_8f8f8f</item>
+    </style>
+
+    <!--button start-->
+    <style name="BS_MM" parent="MM">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/base_btnselector</item>
+    </style>
+    <style name="BS_MW" parent="MW">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/base_btnselector</item>
+    </style>
+    <style name="BS_WW" parent="WW">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/base_btnselector</item>
+    </style>
+
+    <style name="BS_AM" parent="AM">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/base_btnselector</item>
+    </style>
+    <!--button end-->
+
+    <style name="EDTVSTY_MW" parent="MW">
+        <item name="android:textColor">@color/color_1E90FF</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColorHint">@color/color_4169E1</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">@dimen/dp_10</item>
+    </style>
+
+    <style name="EDTVSTY_MM" parent="MM">
+        <item name="android:textColor">@color/color_1E90FF</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColorHint">@color/color_4169E1</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">@dimen/dp_10</item>
+    </style>
+
+</resources>

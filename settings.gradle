@@ -1,0 +1,8 @@
+include ':distribution'
+include ':mine'
+include ':pay'
+include ':login'
+include ':lib_commen'
+include ':app'
+include ':photoselector'
+rootProject.name = "Supper"

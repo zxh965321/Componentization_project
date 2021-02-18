@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'  //kapt3插件
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    signingConfigs {
+        /**
+         * 设置你的keystore相关
+         */
+        release {
+            storeFile file('key/hengtai.jks')
+            storePassword 'ht20210218'
+            keyAlias = 'hengtai'
+            keyPassword 'ht20210218'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    defaultConfig {
+        applicationId "com.karson.supper"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //butternife
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'boolean', 'is_application', rootProject.ext.android.is_application.toString()
+        }
+        advanced {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            buildConfigField 'boolean', 'is_application', rootProject.ext.android.is_application.toString()
+        }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'boolean', 'is_application', rootProject.ext.android.is_application.toString()
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation rootProject.ext.dependencies.publicImplemetation
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation project(':lib_commen')
+    if (!rootProject.ext.android.is_application) {
+        implementation project(':login')
+        implementation project(':pay')
+        implementation project(':mine')
+    }
+//    implementation 'cn.jiguang.sdk:jpush:3.7.0'
+//    implementation 'cn.jiguang.sdk:jcore:2.4.2'
+//    implementation rootProject.ext.dependencies["okhttp3"]
+//    implementation rootProject.ext.dependencies["multidex"]
+//    implementation rootProject.ext.dependencies["rxjava2"]
+//    implementation rootProject.ext.dependencies["retrofit"]
+}

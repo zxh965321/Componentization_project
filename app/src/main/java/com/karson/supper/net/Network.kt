@@ -2,7 +2,7 @@ package com.karson.supper.net
 
 import android.app.Application
 import android.os.Build
-import com.karson.lib_commen.BuildConfig
+import com.karson.supper.BuildConfig
 import com.karson.lib_commen.app.CommenApp
 import com.karson.lib_commen.net.NetWorkManage
 import com.karson.lib_commen.net.NetWorkManage.getRetrofit

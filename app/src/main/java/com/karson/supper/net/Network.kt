@@ -5,7 +5,6 @@ import android.os.Build
 import com.karson.lib_commen.BuildConfig
 import com.karson.lib_commen.app.CommenApp
 import com.karson.lib_commen.net.NetWorkManage
-import com.karson.lib_commen.net.NetWorkManage.getLiveRetrofit
 import com.karson.lib_commen.net.NetWorkManage.getRetrofit
 import com.karson.lib_commen.net.NetWorkManage.initOkHttpClient
 import com.karson.lib_commen.net.interceptor.HttpBaseParamsInterceptor
